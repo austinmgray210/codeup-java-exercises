@@ -1,9 +1,10 @@
+# MacOS
+.DS_Store
+
+# IntelliJ
 .idea/*
 *.iml
-.DS_STORE
-js/keys.js
-*.log
-node_modules/*
-haters/*
-/In class demonstrations/Assessment 3 review.html
-/In class demonstrations/js/Assessment 3 review.js
+
+# Compiled output
+*.class
+out/*
