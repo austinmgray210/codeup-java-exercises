@@ -61,22 +61,22 @@ public class ConsoleExercises {
         System.out.println("Enter the Width of the classroom");
         String width = input.nextLine();
 
-//      int lengthFixed = Integer.parseInt(length);
-//      int widthFixed = Integer.parseInt(width);
-//
-//      System.out.printf("The perimeter of the classroom is %d feet.\n", ((widthFixed*2) + (lengthFixed*2)));
-//      System.out.printf("The area of the classroom is %d square feet.\n", (widthFixed * lengthFixed));
+      int lengthFixed = Integer.parseInt(length);
+      int widthFixed = Integer.parseInt(width);
+
+      System.out.printf("The perimeter of the classroom is %d feet.\n", ((widthFixed*2) + (lengthFixed*2)));
+      System.out.printf("The area of the classroom is %d square feet.\n", (widthFixed * lengthFixed));
 
 
 
 // TODO: BONUS
 // TODO: Accept decimal entries.
 
-      double lengthFixed = Double.parseDouble(length);
-      double widthFixed = Double.parseDouble(width);
-
-      System.out.printf("The perimeter of the classroom is %.2f feet.\n", ((widthFixed*2) + (lengthFixed*2)));
-      System.out.printf("The area of the classroom is %.2f square feet.\n", (widthFixed * lengthFixed));
+//      double lengthFixed = Double.parseDouble(length);
+//      double widthFixed = Double.parseDouble(width);
+//
+//      System.out.printf("The perimeter of the classroom is %.2f feet.\n", ((widthFixed*2) + (lengthFixed*2)));
+//      System.out.printf("The area of the classroom is %.2f square feet.\n", (widthFixed * lengthFixed));
 
 
 // TODO: Calculate the volume of the rooms in addition to the area and perimeter.
