@@ -87,39 +87,39 @@ public class ControlFlowExercises {
 
 //TODO: Display a table of powers.
 
-        // Prompt the user to enter an integer.
-
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter an integer");
-        int userNumber = input.nextInt();
-
+//        // Prompt the user to enter an integer.
+//
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Enter an integer");
+//        int userNumber = input.nextInt();
+//
 //        // Ask if the user wants to continue.
 //
-        Scanner userConfirmPrompt = new Scanner(System.in);
-        System.out.println("Continue? [y/N]");
-        String userConfirm = userConfirmPrompt.next();
-        boolean userHasConfirmed = userConfirm.equals("y");
+//        Scanner userConfirmPrompt = new Scanner(System.in);
+//        System.out.println("Continue? [y/N]");
+//        String userConfirm = userConfirmPrompt.next();
+//        boolean userHasConfirmed = userConfirm.equals("y");
 //
 //        // Assume that the user will enter valid data.
 //        // Only continue if the user agrees to.
 //
-        if (userHasConfirmed) {
-
-
-            // Display a table of squares and cubes from 1 to the value entered.
-
-            String number = "number";
-            String squared = "squared";
-            String cubed = "cubed";
-
-            System.out.printf("%-5s | %-5s | %-5s %n", number, squared, cubed);
-            System.out.printf("------ | ------- | ----- %n");
-            for (int i = 1; i <= userNumber; i++) {
-                System.out.printf("%-7s| %-8s| %-6s%n", i, i * i, i * i * i);
-            }
-        } else {
-            System.out.println("Cancelling");
-        }
+//        if (userHasConfirmed) {
+//
+//
+//            // Display a table of squares and cubes from 1 to the value entered.
+//
+//            String number = "number";
+//            String squared = "squared";
+//            String cubed = "cubed";
+//
+//            System.out.printf("%-5s | %-5s | %-5s %n", number, squared, cubed);
+//            System.out.printf("------ | ------- | ----- %n");
+//            for (int i = 1; i <= userNumber; i++) {
+//                System.out.printf("%-7s| %-8s| %-6s%n", i, i * i, i * i * i);
+//            }
+//        } else {
+//            System.out.println("Cancelling");
+//        }
 
 // TODO: Convert given number grades into letter grades.
         // Prompt the user for a numerical grade from 0 to 100.
