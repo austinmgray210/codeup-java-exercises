@@ -96,8 +96,6 @@ public class MethodsExercises {
     }
 
 
-// TODO: Create an application that simulates dice rolling.
-
     public static void diceRollerPrompt() {
         Scanner playDiceGamePrompt = new Scanner(System.in);
         System.out.println("Do you want to roll some dice? [y/N]");
