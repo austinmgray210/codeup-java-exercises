@@ -1,9 +1,8 @@
 package movies;
 
-public class Movie{
+public class Movie {
     private String name;
     private String category;
-
 
     public Movie(String name, String category) {
         this.name = name;
@@ -14,8 +13,8 @@ public class Movie{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String inputName) {
+        name = inputName;
     }
 
     public String getCategory() {
@@ -25,4 +24,5 @@ public class Movie{
     public void setCategory(String category) {
         this.category = category;
     }
+
 }
