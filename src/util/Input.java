@@ -4,95 +4,65 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scanner;
+    private static Scanner scanner;
 
-    public Input() {
-        this.scanner = new Scanner(System.in);
+    public static void setScanner(Scanner scanner) {
+        Input.scanner = scanner;
     }
 
-    public Scanner getScan() {
-        return scanner;
-    }
-
-    public String getString(String prompt) {
-        System.out.print(prompt);
-        return scanner.nextLine();
-    }
-
-    public boolean yesNo(String prompt) {
-        boolean value;
-        System.out.print(prompt);
-        String entry = scanner.next();
-        if (entry.equalsIgnoreCase("y") || entry.equalsIgnoreCase("yes")) {
-            value = true;
-        } else {
-            value = false;
+    // Ask user for input and make sure we get a string
+    public static String getString(String prompt) throws Exception {
+        if (scanner == null) {
+            throw new Exception("Input Utility's scanner is not set");
         }
-        return value;
-    }
 
-
-    public int getInt(int min, int max) {
-        System.out.print("Please enter a value between " + min + " and " + max + ": ");
-        int entry = scanner.nextInt();
-        if (entry < min || entry > max) {
-            return getInt(min, max);
-        } else {
-            return entry;
+        String inputString;
+        if (prompt != null) {
+            System.out.println(prompt);
         }
+        inputString = scanner.nextLine();
+        return inputString;
     }
 
-    public int getInt(String prompt) {
-        System.out.print(prompt);
-        String entry = scanner.next();
-        try {
-            return Integer.parseInt(entry);
-        } catch (NumberFormatException e) {
-            System.out.println("Bro, I was asking for an integer. Try again.");
-            return getInt(prompt);
-        }
+    public static String getString() throws Exception {
+        return getString(null);
     }
 
-    public double getDouble(double min, double max) {
-        System.out.print("Please enter a decimal between " + min + " and " + max + ": ");
-        double entry = scanner.nextDouble();
-        if (entry < min || entry > max) {
-            return getDouble(min, max);
-        } else {
-            return entry;
+
+    //
+
+    public static boolean yesNo(String prompt) throws Exception {
+        if (scanner == null) {
+            throw new Exception("Input Utility's scanner is not set");
         }
+
+        boolean response; // this will store the user's response and return true/false from this method
+        if (prompt != null) {
+            System.out.println(prompt);
+        }
+        response = scanner.nextLine().toLowerCase().contains("y");
+        return response;
     }
 
-    public double getDouble(String prompt) {
-        System.out.print(prompt);
-        String entry = scanner.next();
-        try {
-            return Double.parseDouble(entry);
-        } catch(NumberFormatException e) {
-            System.out.println("Bro, please read the prompt and try again.");
-            return getDouble(prompt);
-        }
+    public static boolean yesNo() throws Exception { // Overloaded method for yesNo.
+        return yesNo(null);
     }
 
-    public int getHex(String prompt) {
-        System.out.print(prompt);
-        String entry = scanner.next();
-        try {
-            return Integer.valueOf(entry, 16);
-        } catch(NumberFormatException e) {
-            System.out.println("Bro, please read the prompt and try again.");
-            return getHex(prompt);
-        }
-    }
 
-    public int getBinary(String prompt) {
-        System.out.println(prompt);
-        String entry = scanner.next();
-        try {
-            return Integer.valueOf(entry, 2);
-        } catch(NumberFormatException e) {
-            System.out.println("Gotta read the prompt, yo.");
-            return getBinary(prompt);
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        Input.setScanner(scanner);
+
+        String quote = Input.getString("What's your favorite quote?");
+        System.out.println(quote);
+
+        boolean continueOrNot = Input.yesNo("Do you want to continue?");
+        if (continueOrNot) {
+            System.out.println("User wants to continue");
+         } else {
+            System.out.println("User does not want to continue");
+         }
         }
-    }
+
+
 }
