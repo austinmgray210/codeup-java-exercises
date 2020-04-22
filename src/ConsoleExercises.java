@@ -3,99 +3,98 @@ import java.util.Scanner;
 public class ConsoleExercises {
     public static void main(String[] args) {
 
-// TODO: Copy this code into your main method: double pi = 3.14159;
+        // Problem 1
+        double pi = 3.14159;
 
-//         double pi = 3.14159;
-
-// TODO: Write some Java code that uses the variable pi to output the following:
-// The value of pi is approximately 3.14.
+        //System.out.printf("The value of pi is approximately %.2f.", pi);
 
 //        System.out.format("The value of pi is approximately %.2f%n", pi);
 
-// TODO: Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
 
+        /// Explore Scanner Class
         Scanner input = new Scanner(System.in);
 
-//        System.out.println("Please enter an integer");
-//
+//      Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
+
+//        System.out.println("Please enter an integer: ");
 //        int userInt = input.nextInt();
-//
-//        System.out.printf("User input number: %d.", userInt);
+//        System.out.println(userInt);
 
-// TODO: What happens if you input something that is not an integer?
-// It throws an error for mismatched input
+//      What happens if you input something that is not an integer
+        // input mismatch exception
 
-// TODO: Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
+//        Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
 
 //        System.out.println("Please enter 3 words");
 
-//        String firstWord = input.next();
-//        String secondWord = input.next();
-//        String thirdWord = input.next();
+//        String word1 = input.next();
+//        String word2 = input.next();
+//        String word3 = input.next();
 //
-//        System.out.printf("\nHere's your first word: %s.\n Here's your second word: %s.\n Here's your third word: %s.\n", firstWord, secondWord, thirdWord);
+//        System.out.println(word1);
+//        System.out.println(word2);
+//        System.out.println(word3);
+
+//        What happens if you enter less than 3 words?
+        // You cant continue until 3 words are entered
 
 
-//        What happens if you enter less than 3 words? It doesn't stop scanning until three are entered.
-//        What happens if you enter more than 3 words? It stops recording inputs after the first 3 are entered.
+//        What happens if you enter more than 3 words?
+        // only the first 3 inputs are accepted
 
-// TODO: Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
 
-//        System.out.println("Please type a sentence.");
 
+//        Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
+
+//        System.out.println("please enter a sentence");
 //        String sentence = input.next();
-//        System.out.print(sentence);
+//        System.out.println(sentence);
 
-//        do you capture all of the words? No, it only captures the first word before a white space.
 
-// TODO: Rewrite the above example using the nextLine method.
+        // Rewrite the above example using the .nextLine method.
 
+//        System.out.println("please enter a sentence");
 //        String sentence = input.nextLine();
-//        System.out.print(sentence);
-
-// TODO: Calculate the perimeter and area of Codeup's classrooms.
-// TODO: Prompt the user to enter values of length and width of a classroom at Codeup.
-        // Use the nextLine method to get user input and [parse]
-        System.out.println("Enter the Length of the classroom");
-        String length = input.nextLine();
-        System.out.println("Enter the Width of the classroom");
-        String width = input.nextLine();
-
-      int lengthFixed = Integer.parseInt(length);
-      int widthFixed = Integer.parseInt(width);
-
-      System.out.printf("The perimeter of the classroom is %d feet.\n", ((widthFixed*2) + (lengthFixed*2)));
-      System.out.printf("The area of the classroom is %d square feet.\n", (widthFixed * lengthFixed));
+//        System.out.println(sentence);
 
 
 
-// TODO: BONUS
-// TODO: Accept decimal entries.
-
-//      double lengthFixed = Double.parseDouble(length);
-//      double widthFixed = Double.parseDouble(width);
+//     Calculate the perimeter and area of Codeup's classrooms. Prompt the user to enter values of length and width of the class. Use the .nextLine method to get user input and cast the resulting string to a numeric type.
 //
-//      System.out.printf("The perimeter of the classroom is %.2f feet.\n", ((widthFixed*2) + (lengthFixed*2)));
-//      System.out.printf("The area of the classroom is %.2f square feet.\n", (widthFixed * lengthFixed));
 
+//        System.out.println("Please enter a length");
+//        String lengthInput = input.nextLine();
 
-// TODO: Calculate the volume of the rooms in addition to the area and perimeter.
-
-//        System.out.println("Enter the Height of the classroom");
-//        String height = input.nextLine();
+//        System.out.println("Please enter a width");
+//        String widthInput = input.nextLine();
 //
-//        int lengthFixed = Integer.parseInt(length);
-//        int widthFixed = Integer.parseInt(width);
-//        int heightFixed = Integer.parseInt(height);
+//        int length = Integer.parseInt(lengthInput);
+//        int width = Integer.parseInt(widthInput);
 //
-//      System.out.printf("The perimeter of the classroom is %d feet.\n", ((widthFixed*2) + (lengthFixed*2)));
-//      System.out.printf("The area of the classroom is %d square feet.\n", (widthFixed * lengthFixed));
-//      System.out.printf("The volume of the classroom is %d square feet.\n", ((widthFixed * lengthFixed) * heightFixed));
+//        int area = length * width;
+//        int perimeter = (2*width) + (2*length);
+//
+//        System.out.println("perimeter = " + perimeter);
+//        System.out.println("area = " + area);
 
 
 
-    }
+        System.out.println("Please enter a length");
+        int length = Integer.parseInt(input.nextLine());
 
-    private static void parseInt(String width) {
+        System.out.println("Please enter a width");
+        int width = Integer.parseInt(input.nextLine());
+
+
+        int area = length * width;
+        int perimeter = (2*width) + (2*length);
+
+        System.out.println("perimeter = " + perimeter);
+        System.out.println("area = " + area);
+
+
+
+
+
     }
 }
